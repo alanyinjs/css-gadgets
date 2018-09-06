@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Helvetica Neue", Helvetica, Sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #181818;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 2rem;
+  color: #888888
+  padding: 5px 0;
+}
+
+.message {
+  background: #181818;
+  color: #FFFFFF;
+  position: absolute;
+  top: -30rem;
+  left: 0;
+  width: 100%;
+  padding: 10rem;
+  transition: top 0.3s ease;
+  overflow: hidden;
+}
+
+.message h1 {
+  color: #FFFFFF
+}
+
+#about-me-button {
+  position: absolute;
+  cursor: pointer;
+  top: -100%;
+  left: -100%;
+}
+
+#about-me-button + label {
+  position: absolute;
+  top: 25rem;
+  left: 30rem;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #FFFFFF;
+  background-color:#26AE90;
+  width: 10rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+#about-me-button + label::after {
+  content: "About Me"
+}
+
+.page-title {
+  margin: 100px;
+  transition: margin 0.3s ease;
+  padding: 1rem 0.5rem;
+}
+
+#about-me-button:checked ~ .message {
+  top: 0;
+}
+
+#about-me-button:checked ~ .page-title {
+  margin-top: 30rem;
+}
+
+#about-me-button:checked + label {
+  background:#DD6149;
+  top: 50rem;
+}
+
+#about-me-button:checked + label:after {
+  content: "Collapse";
+}
